@@ -1,11 +1,13 @@
 
-import React from "react";
+import React, {useState} from "react";
 import './../styles/App.css';
 
 const App = () => {
+  let [name, setName]=useState("");
   return (
     <div>
-        {/* Do not remove the main div */}
+        <input onChange={(eve)=>setName(eve.target.value)}/>
+        {name && <p>Hello {name}!</p>}
     </div>
   )
 }
